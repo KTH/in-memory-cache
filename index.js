@@ -13,7 +13,7 @@ const DEFAULT_TTL_MS = 1000;
 const add = (itemKey, value, ttl = DEFAULT_TTL_MS) => {
   STORE[itemKey] = {
     value: value,
-    rejectAfterTimestamp: Date.now() + ttl
+    expires: Date.now() + ttl
   };
 };
 
@@ -30,8 +30,8 @@ const remove = itemKey => {
  * @param {*} itemKey Unique key
  */
 const get = itemKey => {
-  const item = STORE[itemKey];
-  if (isValidItem(item)) {
+  const item = getFull(itemKey);
+  if (item != undefined) {
     return item.value;
   }
   return undefined;
@@ -54,7 +54,7 @@ const length = () => {
 };
 
 /**
- * Gets the full item matching the itemKey in the store. Includes the rejectAfterTimestamp.
+ * Gets the full item matching the itemKey in the store. Includes the expires.
  * @param {*} itemKey Unique key
  */
 const getFull = itemKey => {
@@ -79,7 +79,7 @@ const isValidItem = item => {
   if (item == null) {
     return false;
   }
-  if (Date.now() > item.rejectAfterTimestamp) {
+  if (Date.now() > item.expires) {
     return false;
   }
   return true;

@@ -23,16 +23,16 @@ describe("Cache - Add", function() {
   }ms is used as the time for an item to live.`, function() {
     cache.removeAll();
     cache.add("item-key", {});
-    const rejectAfterTimestamp = cache.getFull("item-key").rejectAfterTimestamp;
-    const ttl = Date.now() - rejectAfterTimestamp;
+    const expires = cache.getFull("item-key").expires;
+    const ttl = Date.now() - expires;
     expect(ttl).to.be.below(cache.DEFAULT_TTL_MS + 1); // The +1 is for when the CPU is fast and it s equal and not below.
   });
 
   it(`Use a specific TTL for an item to live.`, function() {
     cache.removeAll();
     cache.add("item-key", {}, 9999);
-    const rejectAfterTimestamp = cache.getFull("item-key").rejectAfterTimestamp;
-    const ttl = rejectAfterTimestamp - Date.now();
+    const expires = cache.getFull("item-key").expires;
+    const ttl = expires - Date.now();
 
     expect(ttl).to.be.above(cache.DEFAULT_TTL_MS);
   });

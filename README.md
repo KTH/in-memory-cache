@@ -6,7 +6,7 @@ This is how you use the in-memory cache. It is a very basic.
 
 const cache = require('in-memory-cache');
 
-const user = { firstName: "Patric", lastname: "Jansson" }
+const user = { firstName: "John", lastname: "Doe" }
 
 cache.add('user-id', user);
 
@@ -24,8 +24,8 @@ If a cache item should live for a long time you can set a time to live on it in 
 ```javascript
 const cache = require('in-memory-cache');
 const aDay = 1000 * 60 * 60 * 24;
-const me = { firstName: 'Patric', lastname: 'Jansson' }
-cache.add('long-caching-object', me, aDay);
+const user = { firstName: 'John', lastname: 'Doe' }
+cache.add('long-caching-object', user, aDay);
 ```
 
 

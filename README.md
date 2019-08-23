@@ -4,7 +4,7 @@ This is how you use the in-memory cache. It is a very basic.
 
 ```javascript
 
-const cache = require('in-memory-cache');
+const cache = require('kth-node-in-memory-cache');
 
 const user = { firstName: "John", lastname: "Doe" }
 
@@ -22,7 +22,7 @@ cache.remove('user-id');
 If a cache item should live for a long time you can set a time to live on it in milliseconds on the item.
 
 ```javascript
-const cache = require('in-memory-cache');
+const cache = require('kth-node-in-memory-cache');
 const aDay = 1000 * 60 * 60 * 24;
 const user = { firstName: 'John', lastname: 'Doe' }
 cache.add('long-caching-object', user, aDay);

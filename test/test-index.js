@@ -64,9 +64,11 @@ describe("Cache Remove", function() {
   it("It is possible to remove one specific item in the store.", function() {
     cache.removeAll();
     cache.add("key-1", "value 1");
-    expect(cache.length()).to.equal(1);
-    cache.remove("key-1");
-    expect(cache.length()).to.equal(0);
+    cache.add("key-2", "value 2");
+    cache.add("key-3", "value 3");
+    expect(cache.length()).to.equal(3);
+    cache.remove("key-2");
+    expect(cache.length()).to.equal(2);
   });
 
   it("It is possible to remove all items in the store.", function() {

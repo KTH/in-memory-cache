@@ -1,0 +1,25 @@
+{
+  "//": "JSHint configuration - http://jshint.com/docs/options/",
+  "name": "in-memory-cache",
+  "version": "0.1.0",
+  "description": "Basic in memory cache for primitives and objects.",
+  "main": "index.js",
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/KTH/in-memory-cache"
+  },
+  "scripts": {
+    "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
+    "build": "./build.sh"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^6.2.0"
+  }
+}

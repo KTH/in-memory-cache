@@ -27,3 +27,34 @@ const aDay = 1000 * 60 * 60 * 24;
 const me = { firstName: 'Patric', lastname: 'Jansson' }
 cache.add('long-caching-object', me, aDay);
 ```
+
+
+## Run tests
+
+To run the tests do npm magic or run `./build.sh`.
+```bash
+npm install
+npm test
+```
+
+```text
+
+  Cache - Add
+    ✓ 'Null' is and acceptable cache item value.
+    ✓ 'Undefined' is and acceptable cache item value.
+    ✓ When no TTL is passed, the default 1000ms is used as the time for an item to live.
+    ✓ Use a specific TTL for an item to live.
+
+  Cache - Get
+    ✓ It is possible to store and get a string.
+    ✓ It is possible to store and get an object.
+    ✓ If the TTL has expired, 'undefined' will be returend for the item key.
+
+  Cache Remove
+    ✓ It is possible to remove one specific item in the store.
+    ✓ It is possible to remove all items in the store.
+
+  Cache Length
+    ✓ It is possible to get the numer of items in the store.
+
+```

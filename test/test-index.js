@@ -78,3 +78,12 @@ describe("Cache Remove", function() {
     expect(cache.length()).to.equal(0);
   });
 });
+
+describe("Cache Length", function() {
+  it("It is possible to get the numer of items in the store.", function() {
+    cache.removeAll();
+    cache.add("key-1", "value 1");
+    cache.add("key-2", "value 2");
+    expect(cache.length()).to.equal(2);
+  });
+});

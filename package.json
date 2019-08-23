@@ -1,6 +1,6 @@
 {
   "//": "JSHint configuration - http://jshint.com/docs/options/",
-  "name": "@kth/kth-node-in-memory-cache",
+  "name": "@kth/in-memory-cache",
   "version": "0.1.0",
   "description": "Basic in memory cache for primitives and objects.",
   "main": "index.js",

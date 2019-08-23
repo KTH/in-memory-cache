@@ -1,6 +1,6 @@
-# In Memory Cache
+# In-memory Cache
 
-This is how you use the cache. It is a very basic in memory cache.
+This is how you use the in-memory cache. It is a very basic.
 
 ```javascript
 

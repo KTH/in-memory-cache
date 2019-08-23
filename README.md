@@ -1,12 +1,12 @@
-# In Memory Cache
+# In-memory Cache
 
-This is how you use the cache. It is a very basic in memory cache.
+This is how you use the in-memory cache. It is a very basic.
 
 ```javascript
 
-const cache = require('in-memory-cache');
+const cache = require('kth-node-in-memory-cache');
 
-const user = { firstName: "Patric", lastname: "Jansson" }
+const user = { firstName: "John", lastname: "Doe" }
 
 cache.add('user-id', user);
 
@@ -22,10 +22,10 @@ cache.remove('user-id');
 If a cache item should live for a long time you can set a time to live on it in milliseconds on the item.
 
 ```javascript
-const cache = require('in-memory-cache');
+const cache = require('kth-node-in-memory-cache');
 const aDay = 1000 * 60 * 60 * 24;
-const me = { firstName: 'Patric', lastname: 'Jansson' }
-cache.add('long-caching-object', me, aDay);
+const user = { firstName: 'John', lastname: 'Doe' }
+cache.add('long-caching-object', user, aDay);
 ```
 
 

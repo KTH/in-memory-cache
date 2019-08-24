@@ -1,6 +1,6 @@
 # In-memory Cache
 
-This is how you use the in-memory cache. It is a very basic.
+This is how you use the in-memory cache. It is a very basic iplementation.
 
 ```javascript
 
@@ -31,7 +31,7 @@ cache.add('long-caching-object', user, aDay);
 
 ## Run tests
 
-To run the tests do npm magic or run `./build.sh`.
+To run the tests, do npm magic or run `./build.sh`.
 ```bash
 npm install
 npm test

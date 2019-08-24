@@ -31,7 +31,8 @@ cache.add('long-caching-object', user, aDay);
 
 ## Run tests
 
-To run the tests, do npm magic or run `./build.sh`.
+To run the tests, do npm magic or run `./build.sh`. You can also view the tests at https://travis-ci.org/KTH/in-memory-cache
+
 ```bash
 npm install
 npm test

@@ -52,10 +52,10 @@ npm test
     ✓ If the TTL has expired, 'undefined' will be returend for the item key.
 
   Cache Remove
-    ✓ It is possible to remove one specific item in the store.
-    ✓ It is possible to remove all items in the store.
+    ✓ It is possible to remove one specific item in the cache.
+    ✓ It is possible to remove all items in the cache.
 
   Cache Length
-    ✓ It is possible to get the numer of items in the store.
+    ✓ It is possible to get the numer of items in the cache.
 
 ```

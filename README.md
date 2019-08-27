@@ -40,22 +40,23 @@ npm test
 
 ```text
 
-  Cache - Add
-    ✓ 'Null' is and acceptable cache item value.
-    ✓ 'Undefined' is and acceptable cache item value.
+ Cache - Add
+    ✓ 'Null' is an acceptable cache item value.
+    ✓ 'Undefined' is an acceptable cache item value.
     ✓ When no TTL is passed, the default 1000ms is used as the time for an item to live.
     ✓ Use a specific TTL for an item to live.
 
   Cache - Get
     ✓ It is possible to store and get a string.
+    ✓ It is possible to store and get a number.
     ✓ It is possible to store and get an object.
     ✓ If the TTL has expired, 'undefined' will be returend for the item key.
 
-  Cache Remove
+  Cache - Remove
     ✓ It is possible to remove one specific item in the cache.
     ✓ It is possible to remove all items in the cache.
 
-  Cache Length
+  Cache - Length
     ✓ It is possible to get the numer of items in the cache.
 
 ```

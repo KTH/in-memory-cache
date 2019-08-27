@@ -6,13 +6,13 @@ const expect = require("chai").expect;
 const cache = require("../index");
 
 describe("Cache - Add", function() {
-  it("'Null' is and acceptable cache item value.", function() {
+  it("'Null' is an acceptable cache item value.", function() {
     cache.removeAll();
     cache.add("item-key", null);
     expect(cache.get("item-key")).to.equal(null);
   });
 
-  it("'Undefined' is and acceptable cache item value.", function() {
+  it("'Undefined' is an acceptable cache item value.", function() {
     cache.removeAll();
     cache.add("item-key", undefined);
     expect(cache.get("item-key")).to.equal(undefined);
@@ -44,6 +44,12 @@ describe("Cache - Get", function() {
     cache.add("token", "sEcret-value");
     expect(cache.get("token")).to.equal("sEcret-value");
   });
+  
+  it("It is possible to store and get a number.", function() {
+    cache.removeAll();
+    cache.add("id", 1337);
+    expect(cache.get("id")).to.equal(1337);
+  });
 
   it("It is possible to store and get an object.", function() {
     cache.removeAll();
@@ -60,8 +66,8 @@ describe("Cache - Get", function() {
   });
 });
 
-describe("Cache Remove", function() {
-  it("It is possible to remove one specific item in the store.", function() {
+describe("Cache - Remove", function() {
+  it("It is possible to remove one specific item in the cache.", function() {
     cache.removeAll();
     cache.add("key-1", "value 1");
     cache.add("key-2", "value 2");
@@ -71,7 +77,7 @@ describe("Cache Remove", function() {
     expect(cache.length()).to.equal(2);
   });
 
-  it("It is possible to remove all items in the store.", function() {
+  it("It is possible to remove all items in the cache.", function() {
     cache.removeAll();
     cache.add("key-1", "value 1");
     cache.add("key-2", "value 2");
@@ -81,8 +87,8 @@ describe("Cache Remove", function() {
   });
 });
 
-describe("Cache Length", function() {
-  it("It is possible to get the numer of items in the store.", function() {
+describe("Cache - Length", function() {
+  it("It is possible to get the numer of items in the cache.", function() {
     cache.removeAll();
     cache.add("key-1", "value 1");
     cache.add("key-2", "value 2");

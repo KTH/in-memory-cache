@@ -4,7 +4,7 @@ This is how you use the in-memory cache. It is a very basic iplementation.
 
 ```javascript
 
-const cache = require('kth-node-in-memory-cache');
+const cache = require("@kth/in-memory-cache");
 
 const user = { firstName: "John", lastname: "Doe" }
 

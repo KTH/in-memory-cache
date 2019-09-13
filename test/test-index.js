@@ -18,9 +18,7 @@ describe("Cache - Add", function() {
     expect(cache.get("item-key")).to.equal(undefined);
   });
 
-  it(`When no TTL is passed, the default ${
-    cache.DEFAULT_TTL_MS
-  }ms is used as the time for an item to live.`, function() {
+  it(`When no TTL is passed, the default ${cache.DEFAULT_TTL_MS}ms is used as the time for an item to live.`, function() {
     cache.removeAll();
     cache.add("item-key", {});
     const expires = cache.getFull("item-key").expires;
@@ -58,6 +56,10 @@ describe("Cache - Get", function() {
     const user = cache.get("user");
     expect(user).to.equal(undefined);
   });
+  it("If there is no matching item in the store 'undefined' will be returned.", function() {
+    cache.removeAll();
+    expect(cache.get("key")).to.equal(undefined);
+  });
 });
 
 describe("Cache Remove", function() {
@@ -78,6 +80,12 @@ describe("Cache Remove", function() {
     expect(cache.length()).to.equal(2);
     cache.removeAll();
     expect(cache.length()).to.equal(0);
+  });
+
+  it("Nothing happens if you remove an item that is not in the store.", function() {
+    cache.add("key-1", "value 1");
+    cache.remove("key-not-there");
+    expect(cache.length()).to.equal(1);
   });
 });
 

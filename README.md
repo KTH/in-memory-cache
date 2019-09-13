@@ -50,12 +50,14 @@ npm test
     ✓ It is possible to store and get a string.
     ✓ It is possible to store and get an object.
     ✓ If the TTL has expired, 'undefined' will be returend for the item key.
+    ✓ If there is no matching item in the store 'undefined' will be returned.
 
   Cache Remove
-    ✓ It is possible to remove one specific item in the cache.
-    ✓ It is possible to remove all items in the cache.
+    ✓ It is possible to remove one specific item in the store.
+    ✓ It is possible to remove all items in the store.
+    ✓ Nothing happens if you remove an item that is not in the store.
 
   Cache Length
-    ✓ It is possible to get the numer of items in the cache.
+    ✓ It is possible to get the numer of items in the store.
 
 ```

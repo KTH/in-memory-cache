@@ -17,9 +17,9 @@ if (cache.valid('user-id')) {
 cache.remove('user-id');
 ```
 
-## Time To Live
+## TTL - Set the time an item is valid
 
-If a cache item should live for a long time you can set a time to live on it in milliseconds on the item.
+If a cache item should live for a long time you can set a time to live (TTL) on it in milliseconds on the item.
 
 ```javascript
 const cache = require('kth-node-in-memory-cache');

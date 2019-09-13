@@ -4,7 +4,7 @@ This is how you use the in-memory cache. It is a very basic iplementation.
 
 ```javascript
 
-const cache = require('kth-node-in-memory-cache');
+const cache = require("@kth/in-memory-cache");
 
 const user = { firstName: "John", lastname: "Doe" }
 
@@ -39,25 +39,24 @@ npm test
 ```
 
 ```text
-
   Cache - Add
-    ✓ 'Null' is and acceptable cache item value.
-    ✓ 'Undefined' is and acceptable cache item value.
-    ✓ When no TTL is passed, the default 1000ms is used as the time for an item to live.
-    ✓ Use a specific TTL for an item to live.
+    ✅ 'Null' is and acceptable cache item value.
+    ✅ 'Undefined' is and acceptable cache item value.
+    ✅ When no TTL is passed, the default 1000ms is used as the time for an item to live.
+    ✅ Use a specific TTL for an item to live.
 
   Cache - Get
-    ✓ It is possible to store and get a string.
-    ✓ It is possible to store and get an object.
-    ✓ If the TTL has expired, 'undefined' will be returend for the item key.
-    ✓ If there is no matching item in the store 'undefined' will be returned.
+    ✅ It is possible to store and get a string.
+    ✅ It is possible to store and get an object.
+    ✅ If the TTL has expired, 'undefined' will be returend for the item key.
+    ✅ If there is no matching item in the store 'undefined' will be returned.
 
   Cache Remove
-    ✓ It is possible to remove one specific item in the store.
-    ✓ It is possible to remove all items in the store.
-    ✓ Nothing happens if you remove an item that is not in the store.
+    ✅ It is possible to remove one specific item in the store.
+    ✅ It is possible to remove all items in the store.
+    ✅ Nothing happens if you remove an item that is not in the store.
 
   Cache Length
-    ✓ It is possible to get the numer of items in the store.
+    ✅ It is possible to get the numer of items in the store.
 
 ```

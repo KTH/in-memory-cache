@@ -38,16 +38,14 @@ const get = itemKey => {
 };
 
 /**
- * Gets the item value matching the itemKey in the store.
- * @param {*} itemKey Unique key
+ * Removes all items in the cache, an empty store is all that is left.
  */
 const removeAll = () => {
   STORE = {};
 };
 
 /**
- * Gets the item value matching the itemKey in the store.
- * @param {*} itemKey Unique key
+ * Get the number of items in the cache.
  */
 const length = () => {
   return Object.keys(STORE).length;

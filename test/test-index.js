@@ -10,12 +10,14 @@ describe("Cache - Add", function() {
     cache.removeAll();
     cache.add("item-key", null);
     expect(cache.get("item-key")).to.equal(null);
+    expect(cache.length()).to.equal(1);
   });
 
   it("'Undefined' is an acceptable cache item value.", function() {
     cache.removeAll();
     cache.add("item-key", undefined);
     expect(cache.get("item-key")).to.equal(undefined);
+    expect(cache.length()).to.equal(1);
   });
 
   it(`When no TTL is passed, the default ${cache.DEFAULT_TTL_MS}ms is used as the time for an item to live.`, function() {

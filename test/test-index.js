@@ -42,7 +42,7 @@ describe("Cache - Get", function() {
     cache.add("token", "sEcret-value");
     expect(cache.get("token")).to.equal("sEcret-value");
   });
-  
+
   it("It is possible to store and get a number.", function() {
     cache.removeAll();
     cache.add("id", 1337);
@@ -75,8 +75,10 @@ describe("Cache - Remove", function() {
     cache.add("key-2", "value 2");
     cache.add("key-3", "value 3");
     expect(cache.length()).to.equal(3);
+    expect(cache.get("key-2")).to.equal("value 2");
     cache.remove("key-2");
     expect(cache.length()).to.equal(2);
+    expect(cache.get("key-2")).to.equal(undefined);
   });
 
   it("It is possible to remove all items in the cache.", function() {

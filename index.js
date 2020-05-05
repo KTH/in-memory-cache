@@ -13,7 +13,7 @@ const DEFAULT_TTL_MS = 1000;
 const add = (itemKey, value, ttl = DEFAULT_TTL_MS) => {
   STORE[itemKey] = {
     value: value,
-    expires: Date.now() + ttl
+    expires: Date.now() + ttl,
   };
 };
 
@@ -21,7 +21,7 @@ const add = (itemKey, value, ttl = DEFAULT_TTL_MS) => {
  * Remove an item from the cache
  * @param {*} itemKey Unique key
  */
-const remove = itemKey => {
+const remove = (itemKey) => {
   delete STORE[itemKey];
 };
 
@@ -29,7 +29,7 @@ const remove = itemKey => {
  * Gets the item value matching the itemKey in the store.
  * @param {*} itemKey Unique key
  */
-const get = itemKey => {
+const get = (itemKey) => {
   const item = getFull(itemKey);
   if (item != undefined) {
     return item.value;
@@ -55,7 +55,7 @@ const length = () => {
  * Gets the full item matching the itemKey in the store. Includes the expires.
  * @param {*} itemKey Unique key
  */
-const getFull = itemKey => {
+const getFull = (itemKey) => {
   const item = STORE[itemKey];
   if (isValidItem(item)) {
     return item;
@@ -66,14 +66,14 @@ const getFull = itemKey => {
 /**
  * Is the item still valid for use?
  */
-const isValid = itemKey => {
+const isValid = (itemKey) => {
   return isValidItem(get(itemKey));
 };
 
 /**
  * Is the item still valid for use?
  */
-const isValidItem = item => {
+const isValidItem = (item) => {
   if (item == null) {
     return false;
   }
@@ -94,5 +94,5 @@ module.exports = {
   removeAll: removeAll,
   isValid: isValid,
   length: length,
-  DEFAULT_TTL_MS: DEFAULT_TTL_MS
+  DEFAULT_TTL_MS: DEFAULT_TTL_MS,
 };

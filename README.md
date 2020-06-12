@@ -22,7 +22,7 @@ cache.remove('user-id');
 If a cache item should live for a long time you can set a time to live (TTL) on it in milliseconds on the item.
 
 ```javascript
-const cache = require('kth-node-in-memory-cache');
+const cache = require('@kth/in-memory-cache');
 const aDay = 1000 * 60 * 60 * 24;
 const user = { firstName: 'John', lastname: 'Doe' }
 cache.add('long-caching-object', user, aDay);
@@ -60,7 +60,3 @@ npm test
     ✅ It is possible to get the numer of items in the store.
 
 ```
-
-bla
-
-ghhjfg

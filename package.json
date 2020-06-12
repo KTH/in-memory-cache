@@ -2,6 +2,7 @@
   "//": "JSHint configuration - http://jshint.com/docs/options/",
   "name": "@kth/in-memory-cache",
   "version": "0.1.1",
+  "automaticPublish": "true",
   "description": "0.1.1 Basic in memory cache for primitives and objects.",
   "main": "index.js",
   "author": {
@@ -20,6 +21,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.2"
+    "mocha": "^8.0.1"
   }
 }

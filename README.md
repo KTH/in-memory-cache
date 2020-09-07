@@ -10,7 +10,7 @@ const user = { firstName: "John", lastname: "Doe" }
 
 cache.add('user-id', user);
 
-if (cache.valid('user-id')) {
+if (cache.isValid('user-id')) {
     console.log('Users lastname is ' + cache.get('user-id').lastname);
 }
 

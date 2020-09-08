@@ -50,7 +50,7 @@ const add = (itemKey, value, ttl = DEFAULT_TTL_MS) => {
  * @param {*} itemKey Unique key
  */
 const remove = (itemKey) => {
-  delete STORE.delete(itemKey);
+  STORE.delete(itemKey);
 };
 
 /**

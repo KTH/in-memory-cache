@@ -23,6 +23,7 @@ If a cache item should live for a long time you can set a time to live (TTL) on 
 
 ```javascript
 const cache = require('@kth/in-memory-cache');
+
 const aDay = 1000 * 60 * 60 * 24;
 const user = { firstName: 'John', lastname: 'Doe' }
 

@@ -25,6 +25,7 @@ If a cache item should live for a long time you can set a time to live (TTL) on 
 const cache = require('@kth/in-memory-cache');
 const aDay = 1000 * 60 * 60 * 24;
 const user = { firstName: 'John', lastname: 'Doe' }
+
 cache.add('long-caching-object', user, aDay);
 ```
 
@@ -35,10 +36,13 @@ This is not a FIFO, if there is space, the item will be added. Otherwise silentl
 
 ```javascript
 const cache = require('@kth/in-memory-cache');
+
 cache.setMaxSlots(2)
+
 cache.add('key-1', 'value 1');
 cache.add('key-2', 'value 2');
 cache.add('key-3', 'value 3'); // not added, with logger.info(str) message
+
 cache.length(); // 2
 ```
 

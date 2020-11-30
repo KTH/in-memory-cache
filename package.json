@@ -18,10 +18,11 @@
   "scripts": {
     "test": "NODE_ENV=development node_modules/mocha/bin/mocha ./test/test-*.js ./test/**/test-*.js",
     "build": "./build.sh",
-    "clean": "rm -r ./node_modules && rm package-lock.json"
+    "clean": "rm -r ./node_modules && rm package-lock.json",
+    "package-update": "git pull && npm run clean & ncu -u && npm install && npm test"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.2.0"
+    "mocha": "^8.2.1"
   }
 }

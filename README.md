@@ -1,5 +1,7 @@
 # In-memory Cache ![alt text](https://api.travis-ci.org/KTH/in-memory-cache.svg?branch=master)
 
+Npm: `@kth/in-memory-cache`
+
 This is how you use the in-memory cache. It is a very basic iplementation.
 
 ```javascript

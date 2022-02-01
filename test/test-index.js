@@ -134,7 +134,7 @@ describe("Cache - logger", function () {
     cache.setMaxSlots(0);
     expect(() => {
       cache.add("key-1", "value 1");
-    }).to.throw("Cannot read property 'info' of undefined");
+    }).to.throw("Cannot read properties of undefined (reading 'info')");
     cache.setMaxSlots(cache.INFINITE);
     cache.setLogger(console);
   });

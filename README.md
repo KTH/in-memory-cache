@@ -1,5 +1,4 @@
-# In-memory Cache ![alt text](https://api.travis-ci.org/KTH/in-memory-cache.svg?branch=master) ![Continous Integration](https://github.com/KTH/in-memory-cache/actions/workflows/main.yml/badge.svg)
-
+# In-memory Cache ![Continous Integration](https://github.com/KTH/in-memory-cache/actions/workflows/main.yml/badge.svg)
 
 Npm: `@kth/in-memory-cache`
 

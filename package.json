@@ -22,7 +22,7 @@
     "package-update": "git pull && npm run clean && ncu -u && npm install && npm test"
   },
   "devDependencies": {
-    "chai": "^4.3.6",
+    "chai": "^4.3.7",
     "mocha": "^10.1.0"
   },
   "engines": {
